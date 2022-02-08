@@ -26,15 +26,13 @@ function LoginPage() {
             })
         })
         const data = res.json();
-        console.log(data+" above if else")
-        if(data.status=== 404|| !data)
+        if(data.status === 500 || !data)
         {
-            console.log(data+" Login successful ");
-            window.alert("Login Succesful!!");
+            window.alert(" You entered wrong credentials!!");
+         
         }
         else{
-            console.log("unsuccesful!"+ data);
-            window.alert(" You entered wrong credentials!! !!");
+            window.alert("Login Succesful!!");
         }
     }
     const loginEmployer = async ()=>{
