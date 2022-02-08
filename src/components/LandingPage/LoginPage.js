@@ -24,19 +24,36 @@ function LoginPage() {
             body: JSON.stringify({
                 email ,password
             })
+        }).then( response=>{
+            if (response.status===500) {
+                window.alert(" You entered wrong credentials!!")
+            }
+            else{
+                window.alert("Login Succesful!!");
+            }
         })
-        const data = res.json();
-        if(data.status === 500 || !data)
-        {
-            window.alert(" You entered wrong credentials!!");
-         
-        }
-        else{
-            window.alert("Login Succesful!!");
-        }
     }
-    const loginEmployer = async ()=>{
-
+    const loginEmployer = async (e)=>{
+        e.preventDefault();
+        const {email, password} = user  ;
+        const res= await fetch ("/loginemployer",{
+            // method: "POST",
+        // const res= await fetch("/loginemployee",{
+            method: "POST" ,
+            headers:{
+                "content-type" : "application/json",
+            },
+            body: JSON.stringify({
+                email ,password
+            })
+        }).then( response=>{
+            if (response.status===500) {
+                window.alert(" You entered wrong credentials!!")
+            }
+            else{
+                window.alert("Login Succesful!!");
+            }
+        })
     }
     return ( 
         <>
