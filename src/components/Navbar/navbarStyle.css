@@ -1,0 +1,24 @@
+.navbar{
+    height: 10vh;
+    background-color: rgb(238, 255, 252);
+    font-size: 2rem;
+    display: flex;
+    margin: auto;
+}
+.navbar-brand
+{
+    font-size: 6vh;
+    /* margin: auto; */
+}
+.container-fluid
+{
+    margin-left: 3%;
+}
+.collapse
+{
+    margin-left: 30% ;
+}
+.nav-item
+{
+    margin-left: 15%;
+}

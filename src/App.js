@@ -4,12 +4,16 @@ import LoginPage from './components/LandingPage/LoginPage';
 import SignupEmployee from './components/LandingPage/signupEmployee';
 import { Routes, Route, Link } from "react-router-dom";
 import SignupEmployer from './components/LandingPage/signupEmployer';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
         <Routes>
-        <Route path="/" element={ <LoginPage/> } />
+        <Route path="/" element={ 
+        // <LoginPage/>
+        <Navbar/>
+         } />
         <Route path="/registerEmployee" element={ <SignupEmployee/> } />
         <Route path="/registerEmployer" element= { <SignupEmployer/> }  />
 
