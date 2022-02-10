@@ -1,7 +1,10 @@
 // import React, { PureComponent } from 'react';
 import { useState } from 'react';
+import {  useNavigate } from 'react-router-dom';
 import '../LandingPage/LoginStyle.css';
+import Cookies from 'js-cookie'
 function LoginPage() {
+    let navigate = useNavigate();
     const [user,setUser] = useState({
         email:"" , password:""
     });
@@ -11,12 +14,11 @@ function LoginPage() {
         value= e.target.value ;
         setUser({...user,[name]: value});
     }
+    let logdata ;
     const loginEmployee = async (e)=>{
         e.preventDefault();
         const {email, password} = user  ;
         const res= await fetch("/loginemployee",{
-            // method: "POST",
-        // const res= await fetch("/loginemployee",{
             method: "POST" ,
             headers:{
                 "content-type" : "application/json",
@@ -26,12 +28,20 @@ function LoginPage() {
             })
         }).then( response=>{
             if (response.status===500) {
-                window.alert(" You entered wrong credentials!!")
+                window.alert(" You entered wrong credentials!!");
             }
             else{
+                // console.log(`response: ${response}`);
+                response.json().then((data)=>{
+                    let id= data.ID;
+                    Cookies.set('ID',id);
+                });
                 window.alert("Login Succesful!!");
+                navigate('/home')
             }
         })
+        logdata= await res.json();
+        console.log(`res logdata at last ${logdata}`)
     }
     const loginEmployer = async (e)=>{
         e.preventDefault();
@@ -51,7 +61,13 @@ function LoginPage() {
                 window.alert(" You entered wrong credentials!!")
             }
             else{
+                response.json().then((data)=>{
+                    let id= data.ID;
+                    Cookies.set('ID',id);
+                    console.log("id== "+ id);
+                });
                 window.alert("Login Succesful!!");
+                navigate('/homeEmployer')
             }
         })
     }

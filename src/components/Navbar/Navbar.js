@@ -1,6 +1,13 @@
 import './navbarStyle.css';
-import { NavLink } from 'react-router-dom'
-function Navbar() {
+import { useNavigate, NavLink } from 'react-router-dom'
+import Cookies from 'js-cookie'
+function Navbar(user) {
+  let navigate = useNavigate();
+    console.log(`inside nav: ${user.name}`);
+    const handleLogout= ()=>{
+      Cookies.remove('ID');
+      navigate("/");
+    }
     return ( 
         <>
         <nav className="navbar navbar-expand-lg navbar-light ">
@@ -13,7 +20,6 @@ function Navbar() {
       <ul className="navbar-nav ">
         <li className="nav-item">
         <NavLink to="/"  activeClassName="active">Home</NavLink>
-          {/* <a className="nav-link active"className="nav-link active" aria-current="page" href="#">Home</a> */}
         </li>
         <li className="nav-item">
         <NavLink to="/about"  activeClassName="">About</NavLink>
@@ -24,8 +30,10 @@ function Navbar() {
           {/* <a className="nav-link" href="#">Contact</a> */}
         </li>
         <li className="nav-item">
-          <a className="nav-link ">
-          </a>
+        <NavLink to="/about"  activeClassName="">{user.name}</NavLink>
+        </li>
+        <li className="nav-item">
+        <button type="button" className="btn btn-outline-secondary " onClick={handleLogout}>Logout</button>
         </li>
       </ul>
     </div>

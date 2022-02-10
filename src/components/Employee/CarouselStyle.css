@@ -1,0 +1,19 @@
+.text
+{
+    color: black;
+}
+#carouselExampleCaptions
+{
+    margin-left: 5%;
+    width: 90%;
+}
+.carousel-inner{
+    /* width: 60vw; */
+    /* border: solid black; */
+}
+.crsl{
+    margin-top: 3%;
+    margin-left: 25%;
+    width: 60vw;
+    /* height: 60 %; */
+}
