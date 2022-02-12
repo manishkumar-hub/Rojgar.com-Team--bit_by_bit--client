@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quintessential&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@600&display=swap');
 .navbar{
     height: 10vh;
     background-color: rgb(238, 255, 252);
@@ -8,6 +10,10 @@
 .navbar-brand
 {
     font-size: 6vh;
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
+/* font-family: 'Quintessential', cursive; */
     /* margin: auto; */
 }
 .container-fluid
@@ -20,5 +26,7 @@
 }
 .nav-item
 {
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Playfair Display', serif;
     margin-left: 10%;
 }

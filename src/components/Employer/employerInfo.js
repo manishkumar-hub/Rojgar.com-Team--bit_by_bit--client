@@ -13,29 +13,29 @@ function EmployerInfo(user) {
   )
 
   let name, value;
-  const addemail= ()=>{
-    name= "gmail"
-    value="dsfdf";
-    setNewJob({...newJob,[name]:value })  
-}
-const addnumber =()=>{
-     name= "contactNumber"
-    value="45346";
-    setNewJob({...newJob,[name]: value})
-    newJob.contactNumber= "65679"
-     console.log("job :")
-    console.log(newJob);
-    addemail();
-}
+//   const addemail= ()=>{
+//     name= "gmail"
+//     value="dsfdf";
+//     setNewJob({...newJob,[name]:value })  
+// }
+// const addnumber =()=>{
+//      name= "contactNumber"
+//     value="45346";
+//     setNewJob({...newJob,[name]: value})
+//     newJob.contactNumber= "65679"
+//      console.log("job :")
+//     console.log(newJob);
+//     addemail();
+// }
   const handleInputs = (e) =>{
     name = e.target.name
     value = e.target.value
     setNewJob({ ...newJob, [name]: value })
-    addnumber();
+    // addnumber();
   }
   const postData = async (e) => {
     e.preventDefault()
-    const { title, description, salary, openings,gmail,contactNumber, experienceRequired } = newJob ;
+    const { title, description, salary, openings,gmail,contactNumber, experienceRequired,organisation } = newJob ;
     const res = await fetch('/jobs', {
       method: 'POST',
       headers: {
@@ -49,6 +49,7 @@ const addnumber =()=>{
         gmail,
         contactNumber,
         experienceRequired,
+        organisation
       }),
     })
     // console.log("after job post");
@@ -75,9 +76,9 @@ const addnumber =()=>{
     <>
       <div className='container-fluid'>
         <div className='row'>
-          <div className='container d-flex justify-content-center align-items-center'>
-            <div className='card' id="card-emplr">
-              <div className='upper'>
+          <div className='employer-container d-flex justify-content-center align-items-center'>
+            <div className='employer-card'>
+              <div className='employer-upper'>
                 {' '}
                 <img
                   src='https://i.imgur.com/Qtrsrk5.jpg'
@@ -85,22 +86,25 @@ const addnumber =()=>{
                 />{' '}
               </div>
               <div className='user text-center'>
-                <div className='profile'>
+                <div className='employer-profile'>
                   {' '}
                   <img
-                    src='https://i.imgur.com/JgYD2nQ.jpg'
+                    className='employer-pic'
+                    src='https://c.ndtvimg.com/2021-12/tade5vs8_mukesh-ambani_625x300_20_December_21.jpg'
                     className='rounded-circle'
                     width='80'
                   />{' '}
                 </div>
               </div>
               <div className='mt-5 text-center'>
-                <h4 className='mb-0'>{user.name}</h4>{' '}
-                <span className='text-muted d-block mb-2'>{user.email}</span>{' '}
-                <button className='btn btn-primary btn-sm follow'>
-                  Follow
-                </button>
-                <div className='d-flex justify-content-between align-items-center mt-4 px-4'>
+                <div className='employer-midsec'>
+                  <h4 className='mb-0'>{user.name}</h4>{' '}
+                  <span className='text-muted d-block mb-2'>{user.email}</span>{' '}
+                  <button className='btn btn-primary btn-sm follow'>
+                    Follow
+                  </button>
+                </div>
+                <div className=' employer-stat d-flex justify-content-between align-items-center mt-4 px-4'>
                   <div className='stats'>
                     <h6 className='mb-0'>Phone</h6> <span>{user.phone}</span>
                   </div>
@@ -109,13 +113,13 @@ const addnumber =()=>{
                     <span>{user.address}</span>
                   </div>
                   <div className='stats'>
-                    <h6 className='mb-0'>Ranks</h6> <span>129</span>
+                    <h6 className='mb-0'>Ranks</h6> <span>2</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className='col-sm-6 col-md-5 form-section'>
+            <div className='col-sm-6 col-md-5 employer-form-section'>
               <div className='login-wrapper'>
                 <h2
                   className='login-title'
@@ -189,7 +193,7 @@ const addnumber =()=>{
                       placeholder='Experience (in yrs)'
                     />{' '}
                   </div>
-                  {/* <div className='form-group'>
+                  <div className='form-group'>
                     {' '}
                     <label className='sr-only'>Contact E-mail Id</label>
                     <input
@@ -213,7 +217,19 @@ const addnumber =()=>{
                       placeholder='Contact NUmber'
                     />{' '}
                   </div>
-                  <label>
+                  <div className='form-group'>
+                    {' '}
+                    <label className='sr-only'>Organisation</label>
+                    <input
+                      type='text'
+                      onChange={handleInputs}
+                      name='organisation'
+                      value={newJob.organisation}
+                      className='form-control'
+                      placeholder='Organisation'
+                    />{' '}
+                  </div>
+                  {/* <label>
                     <input
                       type='checkbox'
                       name='checkval'
@@ -222,13 +238,13 @@ const addnumber =()=>{
                       onChange={addemail}
                     />
                     Check Me!
-                  </label> */}
+                  </label>  */}
                   <div className='post-btn d-flex justify-content-between align-items-center mb-5'>
                     <input
                       id='login'
                       className='btn signup-btn'
                       type='submit'
-                      onClick={ postData}
+                      onClick={postData}
                       value='Post'
                     />{' '}
                   </div>
