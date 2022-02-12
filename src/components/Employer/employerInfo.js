@@ -4,30 +4,30 @@ import '../Employer/employerInfoStyle.css'
 import { Link, useNavigate } from 'react-router-dom'
 
 function EmployerInfo(user) {
-     const [checked, setChecked] = useState(true)
-    let navigate = useNavigate()
+  const [checked, setChecked] = useState(true)
+  let navigate = useNavigate()
   const [submitted, setSubmitted] = useState(false)
   const [newJob, setNewJob] = useState(
     //  {title:"",description:"",salary:"",openings:"",experienceRequired:""}
     {}
   )
 
-  let name, value;
-//   const addemail= ()=>{
-//     name= "gmail"
-//     value="dsfdf";
-//     setNewJob({...newJob,[name]:value })  
-// }
-// const addnumber =()=>{
-//      name= "contactNumber"
-//     value="45346";
-//     setNewJob({...newJob,[name]: value})
-//     newJob.contactNumber= "65679"
-//      console.log("job :")
-//     console.log(newJob);
-//     addemail();
-// }
-  const handleInputs = (e) =>{
+  let name, value
+  //   const addemail= ()=>{
+  //     name= "gmail"
+  //     value="dsfdf";
+  //     setNewJob({...newJob,[name]:value })
+  // }
+  // const addnumber =()=>{
+  //      name= "contactNumber"
+  //     value="45346";
+  //     setNewJob({...newJob,[name]: value})
+  //     newJob.contactNumber= "65679"
+  //      console.log("job :")
+  //     console.log(newJob);
+  //     addemail();
+  // }
+  const handleInputs = (e) => {
     name = e.target.name
     value = e.target.value
     setNewJob({ ...newJob, [name]: value })
@@ -35,7 +35,16 @@ function EmployerInfo(user) {
   }
   const postData = async (e) => {
     e.preventDefault()
-    const { title, description, salary, openings,gmail,contactNumber, experienceRequired,organisation } = newJob ;
+    const {
+      title,
+      description,
+      salary,
+      openings,
+      gmail,
+      contactNumber,
+      experienceRequired,
+      organisation,
+    } = newJob
     const res = await fetch('/jobs', {
       method: 'POST',
       headers: {
@@ -49,7 +58,7 @@ function EmployerInfo(user) {
         gmail,
         contactNumber,
         experienceRequired,
-        organisation
+        organisation,
       }),
     })
     // console.log("after job post");
@@ -61,21 +70,21 @@ function EmployerInfo(user) {
       // console.log(data)
     } else {
       console.log(data)
-      console.log(data.title);
-      let id= data._id;
-      console.log("id= "+id);
+      console.log(data.title)
+      let id = data._id
+      console.log('id= ' + id)
 
       navigate('/homeEmployer')
     }
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     // addemail();
   })
   return (
     <>
       <div className='container-fluid'>
-        <div className='row'>
+        <div className='row' id='employer-row'>
           <div className='employer-container d-flex justify-content-center align-items-center'>
             <div className='employer-card'>
               <div className='employer-upper'>
@@ -101,7 +110,7 @@ function EmployerInfo(user) {
                   <h4 className='mb-0'>{user.name}</h4>{' '}
                   <span className='text-muted d-block mb-2'>{user.email}</span>{' '}
                   <button className='btn btn-primary btn-sm follow'>
-                    Follow
+                    Upload
                   </button>
                 </div>
                 <div className=' employer-stat d-flex justify-content-between align-items-center mt-4 px-4'>
@@ -122,7 +131,7 @@ function EmployerInfo(user) {
             <div className='col-sm-6 col-md-5 employer-form-section'>
               <div className='login-wrapper'>
                 <h2
-                  className='login-title'
+                  className='login-title'title='employer-form-title'
                   style={{
                     fontSize: '32px',
                     fontweight: 'bold',
@@ -132,7 +141,7 @@ function EmployerInfo(user) {
                   Post a new job
                 </h2>
                 <form method='POST'>
-                  <div className='form-group'>
+                  <div className='form-group' id='employer-form'>
                     {' '}
                     <label className='sr-only'>Title</label>
                     <input
@@ -182,12 +191,12 @@ function EmployerInfo(user) {
                   </div>
 
                   <div className='form-group'>
-                    {/* {' '} */}
+                    {' '}
                     <label className='sr-only'>Experience</label>
                     <input
                       type='number'
                       onChange={handleInputs}
-                      name='experience'
+                      name='experienceRequired'
                       value={newJob.experienceRequired}
                       className='form-control'
                       placeholder='Experience (in yrs)'

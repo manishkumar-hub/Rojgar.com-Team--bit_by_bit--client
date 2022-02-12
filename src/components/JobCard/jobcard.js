@@ -25,12 +25,13 @@ function JobCard(job) {
           </mark>
           <mark className='mark'>
             <small className='font-weight-bold'>
-              <i class='fas fa-user-friends'></i> {job.openings} Openings
+              <i class='fas fa-user-friends'></i>
+              {job.openings}Openings
             </small>
           </mark>
           <mark className='mark'>
             <small className='font-weight-bold'>
-              {job.experienceRequired} +years
+              {job.experienceRequired}+years
             </small>
           </mark>
           {/* <mark className='mark'><small className="font-weight-bold">{job.date} </small></mark> */}
