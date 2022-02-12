@@ -1,0 +1,18 @@
+.cardContainer
+{
+    margin: auto;
+    width: 80%;
+    align-items: center;
+    align-content: center;
+}
+#td-title
+{
+    margin: auto;
+    margin-top: 2%;
+    color: white;
+    font-size: 60px;
+    font-family:'Times New Roman';
+    /* width: 80%; */
+    border-radius: 20px ;
+    background-color: rgb(7, 65, 190);
+}
