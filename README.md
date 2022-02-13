@@ -38,13 +38,13 @@
 <hr style="border:2px solid gray"> </hr>
 
 ## Github Repo : 
-  1.) [Rojgar.com - Client](https://github.com/manishkumar-hub/Rojgar.com-Team--bit_by_bit--client/tree/master)  2.)  [Rojgar.com- server](https://github.com/manishkumar-hub/Rojgar.com-Team--bit_by_bit---server/tree/master)
+  ### 1.) [Rojgar.com - Client](https://github.com/manishkumar-hub/Rojgar.com-Team--bit_by_bit--client/tree/master)  2.)  [Rojgar.com- server](https://github.com/manishkumar-hub/Rojgar.com-Team--bit_by_bit---server/tree/master)
 
 <hr style="border:2px solid gray"> </hr>
 
 ## PPT Link
 
- [PPT](https://drive.google.com/file/d/1TfGjF9EV_RJyglFbg2aZl8It0jcFdr1O/view?usp=sharing)
+ ### [PPT](https://drive.google.com/file/d/1TfGjF9EV_RJyglFbg2aZl8It0jcFdr1O/view?usp=sharing)
 <!--     [ppt](https://drive.google.com/file/d/1TfGjF9EV_RJyglFbg2aZl8It0jcFdr1O/view?usp=sharing) -->
     
  <hr style="border:2px solid gray"> </hr>
