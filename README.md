@@ -1,7 +1,8 @@
-## Rojgar.Com
-# Undoubtedly the Covid 19 pandemic has very seriously impacted livelihood and employability.One of the major problem leading to unemployment is lack of access to jobs throughout the country.
-# ...So a simple and secured website Rojgar.Com helps working population with the job providing industrialist.
+# Rojgar.Com
+## Undoubtedly the Covid 19 pandemic has very seriously impacted livelihood and employability.One of the major problem leading to unemployment is lack of access to jobs throughout the country.
+## ...So a simple and secured website Rojgar.Com helps working population with the job providing industrialist.
 
+# DEMO
 ![Screenshot (601)](https://user-images.githubusercontent.com/76401932/153742486-95fd51cc-cda3-4f31-9b6c-8b69c32d1eb1.png)
 
 ![Screenshot (602)](https://user-images.githubusercontent.com/76401932/153742496-12284ab7-fe5a-4398-ac86-b0b5da9fd82a.png)
@@ -10,3 +11,7 @@
 
 <!-- ![Screenshot (604)](https://user-images.githubusercontent.com/76401932/153742507-2db15a5b-a470-48d7-812a-8098233381e5.png) -->
 ![Screenshot (605)](https://user-images.githubusercontent.com/76401932/153742607-dce147cb-1ac8-43ec-b216-437ef3ddb952.png)
+# PPT Link
+https://drive.google.com/file/d/1TfGjF9EV_RJyglFbg2aZl8It0jcFdr1O/view?usp=sharing
+# Video Presentation Link
+
