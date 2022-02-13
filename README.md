@@ -45,7 +45,7 @@
 ## PPT Link
 
  [PPT](https://drive.google.com/file/d/1TfGjF9EV_RJyglFbg2aZl8It0jcFdr1O/view?usp=sharing)
-    [ppt](https://drive.google.com/file/d/1TfGjF9EV_RJyglFbg2aZl8It0jcFdr1O/view?usp=sharing)
+<!--     [ppt](https://drive.google.com/file/d/1TfGjF9EV_RJyglFbg2aZl8It0jcFdr1O/view?usp=sharing) -->
     
  <hr style="border:2px solid gray"> </hr>
 
