@@ -1,3 +1,6 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quintessential&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rowdies:wght@300&display=swap');
 .navbar{
     height: 10vh;
     background-color: rgb(238, 255, 252);
@@ -8,6 +11,13 @@
 .navbar-brand
 {
     font-size: 6vh;
+    font-family: 'Bebas Neue', cursive;
+    /* font-family: 'Rowdies', cursive; */
+    /* font-family: 'Abril Fatface', cursive; */
+
+    /* font-family: 'Playfair Display', serif; */
+    /* font-family: 'Playfair Display', serif; */
+/* font-family: 'Quintessential', cursive; */
     /* margin: auto; */
 }
 .container-fluid
@@ -20,5 +30,16 @@
 }
 .nav-item
 {
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Playfair Display', serif;
     margin-left: 10%;
+    
+}
+a{
+
+  color: #04274c;
+  style: none
+}
+a:hover{
+    color: #235183;
 }

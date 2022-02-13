@@ -22,7 +22,7 @@ function HomeEmployer() {
         return ( 
         <>
         <Navbar {...user} /> 
-        <EmployerInfo/>
+        <EmployerInfo{...user}/>
         {/* <Carousel/> */}
         </>
      );
