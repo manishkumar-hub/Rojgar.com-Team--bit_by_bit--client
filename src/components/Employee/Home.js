@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import '../Employee/homestyle.css'
 import Cookies from 'js-cookie'
 import JobCard from "../JobCard/jobcard";
+import Footer from "../Footer/footer";
+
 // Schema Fields: id, name ,email, phone ,img(opt), qualification ,experience , Occupation
 function Home() {
     const [user, setUser] = useState([]);
@@ -39,6 +41,8 @@ function Home() {
                     })}
                 </div>
             </div>
+
+            <Footer></Footer>
         </>
     );
 }

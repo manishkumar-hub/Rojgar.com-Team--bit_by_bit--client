@@ -2,6 +2,7 @@ import Navbar from "../Navbar/Navbar";
 import  { useState ,useEffect } from "react";
 import Cookies from 'js-cookie'
 import EmployerInfo from "./employerInfo";
+import Footer from "../Footer/footer";
 function HomeEmployer() {
     const [user, setUser] = useState([]);
     const [userID,setuserID]= useState(Cookies.get('ID'));
@@ -23,6 +24,7 @@ function HomeEmployer() {
         <>
         <Navbar {...user} /> 
         <EmployerInfo{...user}/>
+        <Footer></Footer>
         {/* <Carousel/> */}
         </>
      );

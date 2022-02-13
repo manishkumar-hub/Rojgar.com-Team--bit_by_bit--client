@@ -95,11 +95,11 @@ function LoginPage() {
                      <input type="email" name="email" value={user.email} onChange={handleChange} id="email" className="form-control" placeholder="Email"/> </div>
                     <div className="form-group mb-3"> <label for="password" className="sr-only">Password</label>
                      <input type="password" name="password" value={user.password} onChange={handleChange} id="password" className="form-control" placeholder="Password"/> </div>
-                    <div className="d-flex justify-content-between align-items-center mb-5"> <input name="login" id="login" className="btn signup-btn" type="button" value="Login (Employee)" onClick={loginEmployee}/>  
+                    <div className="d-flex justify-content-between align-items-center mb-5"> <input name="login" id="login" className="btn signup-btn" type="button" value="Login (User)" onClick={loginEmployee}/>  
                     <input name="login" id="login" className="btn signup-btn" type="button" value="Login (Employer)" onClick={loginEmployer}/> </div>
                 </form>
                 <p className="login-wrapper-footer-text">Need an account? 
-                <a href="registerEmployee" className="btn login-btn">Register as Employee</a>
+                <a href="registerEmployee" className="btn login-btn">Register as User</a>
                 {/* <a href="#!" className="text-reset">Signup as Employee</a> */}
                 <a href="registerEmployer" className="btn login-btn">Register as Employer</a>
                 </p>
